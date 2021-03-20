@@ -1,0 +1,15 @@
+<header [ngClass]="['w3-container', 'w3-red', 'w3-center']">
+    <h1>PRACTICA 4</h1>
+</header>
+<div [ngClass]="['w3-bar', 'w3-red']">
+    <a [ngClass]="['w3-bar-item, w3-button']" [routerLink]="['/home']" [routerLinkActive]="'w3-black'"><i class="fas fa-home"></i>&nbsp;Home</a>
+    <a [ngClass]="['w3-bar-item, w3-button']" [routerLink]="['/public']" [routerLinkActive]="'w3-black'"><i class="fas fa-lock-open"></i>&nbsp;Pagina Publica</a>
+    <a [ngClass]="['w3-bar-item, w3-button']" *ngIf="user != null" [routerLink]="['/private']" [routerLinkActive]="'w3-black'"><i class="fas fa-user-shield"></i>&nbsp;Pagina Privada</a>
+    <a [ngClass]="['w3-bar-item, w3-button']" *ngIf="user == null" [routerLink]="['/login']" [routerLinkActive]="'w3-black'"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sessio</a>
+    <a [ngClass]="['w3-bar-item, w3-button', 'bdesconectar']" *ngIf="user != null" [routerLinkActive]="'w3-black'" (click)="logout()"><i class="fas fa-sign-out-alt"></i>&nbsp;Desconectar</a>
+    <a [ngClass]="['w3-bar-item, w3-button']" [routerLinkActive]="'w3-black'" target="_blank" href="assets/docs/Aarón-CurriculumVitae.pdf"><i class="fas fa-address-card"></i>&nbsp;CV</a>
+</div>
+<router-outlet></router-outlet>
+<footer [ngClass]="['w3-container', 'w3-red', 'w3-center', 'w3-bottom']">
+    <h3>Aaron Amiell</h3>
+</footer>

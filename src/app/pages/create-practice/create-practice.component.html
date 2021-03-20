@@ -1,0 +1,17 @@
+<div class="mb-3">
+    <label for="title" class="form-label">Titol</label>
+    <input type="text" class="form-control" id="title" [(ngModel)]="practice.title" />
+</div>
+<div class="mb-3">
+    <label for="content" class="form-label">Contingut</label>
+    <textarea type="text" class="form-control" id="content" [(ngModel)]="practice.content"></textarea>
+</div>
+<div class="mb-3">
+    <label for="tag" class="form-label">Tag</label>
+    <input type="text" class="form-control" id="tag" [(ngModel)]="practice.tag" />
+</div>
+<div class="mb-3">
+    <label for="exersiceDate" class="form-label">Data</label>
+    <input type="date" class="form-control" id="date" [(ngModel)]="practice.exersiceDate" />
+</div>
+<button type="submit" class="btn btn-primary" (click)="savePractice()">Crear Practica</button>

@@ -1,0 +1,10 @@
+<div class="divgen">
+    <h3>BENVINGUT A L'AREA PRIVADA</h3>
+    <div>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/home']"><i class="fas fa-home"></i>&nbsp;Tornar al home</button><br><br>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/public']"><i class="fas fa-lock-open"></i>&nbsp;Pagina publica</button><br><br>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/create_practices']"><i class="fas fa-plus-square"></i>&nbsp;Crear Practica</button><br><br>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/practices']"><i class="fas fa-list"></i>&nbsp;Llistat Practiques</button><br><br>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/logout']" (click)="logout()"><i class="fas fa-sign-out-alt"></i>&nbsp;Desconectar</button>
+    </div>
+</div>

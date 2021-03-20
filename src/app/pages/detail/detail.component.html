@@ -1,0 +1,21 @@
+<div class="card" style="width: 25rem;" *ngIf="practice != null">
+    <img src="assets/img/practice.jpg" class="card-img-top" alt="...">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <h5>{{practice.title}}</h5>
+        </li>
+    </ul>
+    <div class="card-body">
+        <p class="card-text">{{practice.content}} </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{practice.tag}}</li>
+        <li class="list-group-item"> {{practice.exersiceDate}}</li>
+    </ul>
+</div>
+<br>
+<div class="botons">
+    <button type="button" class="btn btn-primary" *ngIf="user == null" (click)="GoToHome()"><i class="fas fa-home"></i>&nbsp;Home</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-primary" *ngIf="user == null" (click)="GoToPracticesPublic()"><i class="fas fa-list"></i>&nbsp;Llistat Practiques</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-primary" *ngIf="user != null" (click)="GoToPracticesPrivate()"><i class="fas fa-list"></i>&nbsp;Llistat Practiques</button>&nbsp;&nbsp;
+</div>

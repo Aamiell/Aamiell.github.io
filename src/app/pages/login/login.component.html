@@ -1,0 +1,27 @@
+<div class="divgen">
+    <h3>INICIAR SESSIÓ AMB GOOGLE</h3>
+    <div>
+        <button type="button" class="btn btn-outline-primary" (click)="login()" *ngIf="!acceptedUserError"><i class="fab fa-google"></i>&nbsp;Iniciar seesio Google</button>
+        <br><br>
+        <button type="button" class="btn btn-outline-primary" (click)="login()" *ngIf="acceptedUserError"><i class="fab fa-google"></i>&nbsp;Canviar conte Google</button>
+        <br><br>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="acceptedUserError">
+        <img src="assets/img/error.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">PROBLEMA AMB ELS PERMISOS</h5>
+            <p class="card-text">El usuari elegit no te permisos per accedir a la pagina web</p>
+            <a href="#" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;" *ngIf="loginfall">
+        <img src="assets/img/error.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">PROBLEMA AL INICIAR SESSIO</h5>
+            <p class="card-text">S'ha produit un problema amb l'inici de sessio</p>
+            <a href="#" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+    <br><br>
+</div>

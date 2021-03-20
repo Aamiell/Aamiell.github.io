@@ -1,0 +1,28 @@
+<div class="divgen">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Cercar per tag ..." aria-label="Tag a cercar" aria-describedby="button-addon2" [(ngModel)]="tagFilter">
+        <button class="btn btn-outline-dark" type="button" id="button-addon2" (click)="searchPracticesByTag()">Cercar</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titol</th>
+                <th scope="col">Tag</th>
+                <th scope="col">Opcions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let practice of practices; let i=index">
+                <th scope="row"><i class="fas fa-file-invoice"></i></th>
+                <td>{{practice.title}}</td>
+                <td>{{practice.tag}}</td>
+                <td><button type="button" class="btn btn-info bopcions" (click)="seeDetails(i)"><i class="fas fa-info-circle"></i>&nbsp;Detalls</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger bopcions" (click)="deletePractice(i)"><i class="far fa-trash-alt"></i>&nbsp;Eliminar</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-warning bopcions" (click)="modifyPractice(i)"><i class="far fa-edit"></i>&nbsp;Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-outline-primary torncreate" [routerLink]="['/create_practices']"><i class="fas fa-plus-square"></i>&nbsp;Crear practica</button>
+</div>

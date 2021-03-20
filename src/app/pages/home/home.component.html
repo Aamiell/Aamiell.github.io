@@ -1,0 +1,9 @@
+<div class="divgen">
+    <h3>HOME</h3>
+    <div>
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/public']"><i class="fas fa-lock-open"></i>&nbsp;Pagina publica</button><br><br>
+        <button type="button" class="btn btn-outline-primary" *ngIf="user != null" [routerLink]="['/private']"><i class="fas fa-user-shield"></i>&nbsp;Pagina privada</button>
+        <button type="button" class="btn btn-outline-primary" *ngIf="user == null" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar sessio</button><br><br>
+        <button type="button" class="btn btn-outline-primary" *ngIf="user != null" [routerLink]="['/logout']"><i class="fas fa-sign-out-alt"></i>&nbsp;Desconectar</button>
+    </div>
+</div>

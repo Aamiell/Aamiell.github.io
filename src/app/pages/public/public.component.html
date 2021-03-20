@@ -1,0 +1,27 @@
+<div class="divgen">
+    <h3>BENVINGUT A L'AREA PUBLICA</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titol</th>
+                <th scope="col">Tag</th>
+                <th scope="col">Opcions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let practice of practices; let i=index">
+                <th scope="row"><i class="fas fa-file-invoice"></i></th>
+                <td>{{practice.title}}</td>
+                <td>{{practice.tag}}</td>
+                <td><button type="button" class="btn btn-info bdetalls" (click)="seeDetails(i)"><i class="fas fa-info-circle"></i>&nbsp;Detalls</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger bopcions" *ngIf="user == null" [routerLink]="['/login']"><i class="fas fa-user-clock"></i>&nbsp;REGISTRAT PER PODER VEURE LES OPCIONS</button>
+                    <button type="button" class="btn btn-light bopcions" *ngIf="user != null" [routerLink]="['/practices']"><i class="fas fa-book-reader"></i>&nbsp;ANAR A LES OPCIONS DE CADA PRACTICA</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button type="button" class="btn btn-outline-primary tornhome" [routerLink]="['/home']"><i class="fas fa-home"></i>&nbsp;Tornar al home</button><br><br>
+    </div>
+</div>
