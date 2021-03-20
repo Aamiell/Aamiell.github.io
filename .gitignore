@@ -9,6 +9,11 @@
 
 # dependencies
 /node_modules
+/scully
+
+# scully config
+scully.Practica4.config.ts
+
 
 # profiling files
 chrome-profiler-events*.json

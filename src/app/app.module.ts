@@ -16,6 +16,7 @@ import { LogoutComponent } from './pages/logout/logout.component';
 import { PublicComponent } from './pages/public/public.component';
 import { PrivateComponent } from './pages/private/private.component';
 import { ModifyPracticeComponent } from './pages/modify-practice/modify-practice.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ModifyPracticeComponent } from './pages/modify-practice/modify-practice
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment. firebase)
+    AngularFireModule.initializeApp(environment. firebase),
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
